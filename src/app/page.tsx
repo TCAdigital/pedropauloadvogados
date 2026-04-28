@@ -164,7 +164,7 @@ export default function Home() {
       <section id="home" className="relative min-h-[90vh] flex items-center pt-20 pb-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80"
+            src="/images/hero.png"
             alt="Hero background"
             fill
             className="object-cover"
@@ -201,7 +201,7 @@ export default function Home() {
             <Reveal>
               <div className="relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+                  src="/images/team.png"
                   alt="Lawdit Team"
                   width={800}
                   height={500}
@@ -270,7 +270,7 @@ export default function Home() {
       <section className="relative py-28 text-white">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1521791055366-0d553872952f?w=1920&q=80"
+            src="/images/scales.png"
             alt="Legal consultancy"
             fill
             className="object-cover"
@@ -281,7 +281,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <Reveal>
               <Image
-                src="https://images.unsplash.com/photo-1521791055366-0d553872952f?w=800&q=80"
+                src="/images/founder.png"
                 alt="Lawyer"
                 width={800}
                 height={500}
@@ -303,7 +303,7 @@ export default function Home() {
                   </a>
                   <div className="flex items-center gap-4">
                     <Image
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80"
+                      src="/images/founder.png"
                       alt="Founder"
                       width={56}
                       height={56}
@@ -373,9 +373,9 @@ export default function Home() {
           </Reveal>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Jodi Martha", role: "Client", img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80" },
-              { name: "James Martha", role: "Client", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" },
-              { name: "Olivia Brown", role: "Client", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" },
+              { name: "Jodi Martha", role: "Client", img: "/images/client1.png" },
+              { name: "James Martha", role: "Client", img: "/images/client2.png" },
+              { name: "Olivia Brown", role: "Client", img: "/images/client3.png" },
             ].map((testi, i) => (
               <Reveal delay={i * 100} key={testi.name}>
                 <div className="bg-off-white p-10 border-t-4 border-transparent hover:border-gold transition-colors duration-300">
