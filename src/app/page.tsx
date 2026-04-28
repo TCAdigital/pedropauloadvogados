@@ -80,7 +80,7 @@ export default function Home() {
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const phoneNumber = "5521999999999"; // Substituir pelo número real
+    const phoneNumber = "5521993145542";
     const message = `Olá, meu nome é ${whatsappData.name}. Gostaria de atendimento sobre: ${whatsappData.service}.`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
@@ -101,12 +101,12 @@ export default function Home() {
       <div className="hidden md:block bg-dark2 text-gray-light py-2 text-sm border-b border-white/5">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex justify-between items-center">
           <div className="flex gap-6 items-center">
-            <a href="mailto:info@lawdit.com" className="flex items-center gap-2 hover:text-gold transition-colors">
-              <Mail size={14} /> info@lawdit.com
+            <a href="mailto:contato@pedropauloadvogados.com.br" className="flex items-center gap-2 hover:text-gold transition-colors">
+              <Mail size={14} /> contato@pedropauloadvogados.com.br
             </a>
             <span className="text-white/20">|</span>
-            <a href="tel:+12345678900" className="flex items-center gap-2 hover:text-gold transition-colors">
-              <Phone size={14} /> +1 234 567 8900
+            <a href="tel:+5521993145542" className="flex items-center gap-2 hover:text-gold transition-colors">
+              <Phone size={14} /> +55 21 99314-5542
             </a>
           </div>
           <div className="flex gap-5 items-center">
@@ -468,11 +468,11 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="text-gold shrink-0" size={18} />
-                  <span>info@lawdit.com</span>
+                  <span>contato@pedropauloadvogados.com.br</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="text-gold shrink-0" size={18} />
-                  <span>+1 234 567 890</span>
+                  <span>+55 21 99314-5542</span>
                 </li>
               </ul>
             </div>
