@@ -136,18 +136,23 @@ export default function Home() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-8">
-            {["Home", "About", "Practice Areas", "Case Study", "Attorneys", "Blog"].map((item) => (
+            {[
+              { name: "Início", link: "home" },
+              { name: "Sobre Nós", link: "about" },
+              { name: "Áreas de Atuação", link: "practice" },
+              { name: "Atendimento", link: "contact" }
+            ].map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase().split(" ")[0]}`}
+                key={item.name}
+                href={`#${item.link}`}
                 className="text-white/85 text-[15px] hover:text-gold transition-colors relative group"
               >
-                {item}
+                {item.name}
                 <span className="absolute -bottom-1.5 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
             <a href="#contact" className="btn-primary ml-2 py-2.5 px-6">
-              Free Consult
+              Consulta Gratuita
             </a>
           </div>
 
@@ -168,14 +173,19 @@ export default function Home() {
         }`}
       >
         <div className="flex flex-col p-6 gap-6">
-          {["Home", "About", "Practice Areas", "Case Study", "Attorneys", "Blog", "Contact"].map((item) => (
+          {[
+            { name: "Início", link: "home" },
+            { name: "Sobre Nós", link: "about" },
+            { name: "Áreas de Atuação", link: "practice" },
+            { name: "Atendimento", link: "contact" }
+          ].map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase().split(" ")[0]}`}
+              key={item.name}
+              href={`#${item.link}`}
               className="text-white/80 text-lg border-b border-white/10 pb-4"
               onClick={() => setIsMenuOpen(false)}
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </div>
@@ -197,19 +207,25 @@ export default function Home() {
           <Reveal delay={0}>
             <div className="inline-flex items-center gap-2 bg-gold/15 border border-gold/40 text-gold px-4 py-1.5 text-sm tracking-widest uppercase mb-8">
               <span className="w-1.5 h-1.5 bg-gold rounded-full"></span>
-              Escritório de Advocacia Full Service
+              Soluções Jurídicas de Alta Performance
             </div>
           </Reveal>
           <Reveal delay={150}>
             <h1 className="text-5xl md:text-7xl lg:text-[80px] font-serif font-semibold leading-[1.1] mb-8 max-w-4xl">
-              Atendimento em <em className="text-gold italic">todo o Brasil</em>
+              Defenda seus direitos com <em className="text-gold italic">excelência jurídica</em>
             </h1>
           </Reveal>
           <Reveal delay={300}>
-            <div className="flex flex-wrap gap-4 mt-10">
+            <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl leading-relaxed">
+              Pedro Paulo Advogados: Atendimento full service em todo o Brasil, unindo tradição e inovação para proteger o que é seu.
+            </p>
+            <div className="flex flex-wrap gap-4">
               <a href="#about" className="btn-primary">
-                Explore Company
+                Conheça o Escritório
               </a>
+              <button onClick={() => setIsWhatsAppModalOpen(true)} className="btn-outline border-white text-white hover:bg-white hover:text-dark">
+                Falar com Especialista
+              </button>
             </div>
           </Reveal>
         </div>
@@ -223,20 +239,20 @@ export default function Home() {
               <div className="relative">
                 <Image
                   src="/images/team.png"
-                  alt="Lawdit Team"
+                  alt="Equipe Pedro Paulo Advogados"
                   width={800}
                   height={500}
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-gold text-white w-32 h-32 flex flex-col items-center justify-center text-center p-4">
                   <span className="font-serif text-5xl font-bold leading-none mb-1">20</span>
-                  <span className="text-xs uppercase tracking-widest font-medium">Years of Experience</span>
+                  <span className="text-xs uppercase tracking-widest font-medium">Anos de Experiência</span>
                 </div>
               </div>
             </Reveal>
             <Reveal delay={150}>
               <div className="lg:pl-8">
-                <span className="tag-label">About Our Firm</span>
+                <span className="tag-label">Sobre o Escritório</span>
                 <h2 className="text-4xl md:text-5xl lg:text-[54px] font-semibold leading-tight mb-6 text-dark">
                   Presença <em className="text-gold italic">Física e Digital</em>
                 </h2>
@@ -253,9 +269,6 @@ export default function Home() {
                     Unidade Barra da Tijuca
                   </li>
                 </ul>
-                <a href="#contact" className="btn-primary">
-                  Discover more
-                </a>
               </div>
             </Reveal>
           </div>
@@ -266,19 +279,12 @@ export default function Home() {
       <section className="bg-off-white py-20">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-3 gap-12">
-            {[
-              { icon: Gavel, title: "Legal Production" },
-              { icon: ShieldCheck, title: "Private & Secure" },
-              { icon: Trophy, title: "Winning Awards" },
-            ].map((feature, i) => (
-              <Reveal delay={i * 100} key={feature.title}>
-                <div className="text-center group">
                   <div className="w-20 h-20 mx-auto flex items-center justify-center border border-gold text-gold rounded-full mb-6 transition-all duration-300 group-hover:bg-gold group-hover:text-white">
                     <feature.icon size={32} />
                   </div>
                   <h4 className="text-2xl font-serif font-medium mb-3">{feature.title}</h4>
                   <p className="text-gray text-base leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit condimentum diam lorem.
+                    Compromisso com a ética e resultados sólidos para nossos clientes em cada processo.
                   </p>
                 </div>
               </Reveal>
@@ -311,17 +317,17 @@ export default function Home() {
             </Reveal>
             <Reveal delay={150}>
               <div>
-                <span className="tag-label">Profit make the difference</span>
+                <span className="tag-label">Experiência que faz a diferença</span>
                 <h2 className="text-4xl md:text-5xl font-semibold leading-tight mb-6">
-                  We here for provide <em className="text-gold italic">legal consultancy</em>
+                  Oferecemos <em className="text-gold italic">consultoria jurídica</em> especializada
                 </h2>
                 <p className="text-white/70 text-lg leading-relaxed mb-10">
-                  All people are equal before the law. A good attorney is what makes a difference. Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna.
+                  Todos são iguais perante a lei, mas um atendimento personalizado e estratégico é o que define o sucesso de uma causa. Conte com nossa expertise.
                 </p>
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-                  <a href="#contact" className="btn-outline">
-                    Free Consultation
-                  </a>
+                  <button onClick={() => setIsWhatsAppModalOpen(true)} className="btn-outline">
+                    Consulta Gratuita
+                  </button>
                   <div className="flex items-center gap-4">
                     <Image
                       src="/images/founder.png"
@@ -348,16 +354,13 @@ export default function Home() {
           <div className="grid xl:grid-cols-[350px_1fr] gap-16 items-start">
             <Reveal>
               <div>
-                <span className="tag-label">Legal case studies</span>
+                <span className="tag-label">Excelência em cada causa</span>
                 <h2 className="text-4xl md:text-[42px] font-semibold leading-tight mb-6">
-                  General &amp; Legal <em className="text-gold italic">Practice Areas</em>
+                  Nossas <em className="text-gold italic">Áreas de Atuação</em>
                 </h2>
                 <p className="text-gray text-[17px] leading-relaxed mb-8">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit fermentum lorem diam lorem.
+                  Oferecemos suporte jurídico completo para pessoas físicas e jurídicas com foco em resultados céleres.
                 </p>
-                <a href="#contact" className="btn-primary">
-                  Discover more
-                </a>
               </div>
             </Reveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -386,9 +389,9 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <Reveal>
             <div className="text-center mb-16">
-              <span className="tag-label justify-center">Our satisfied clients</span>
+              <span className="tag-label justify-center">Nossos clientes satisfeitos</span>
               <h2 className="text-4xl md:text-5xl font-semibold">
-                What Our <em className="text-gold italic">Clients Say?</em>
+                O que nossos <em className="text-gold italic">Clientes Dizem?</em>
               </h2>
             </div>
           </Reveal>
@@ -447,12 +450,17 @@ export default function Home() {
             </div>
             
             <div>
-              <h5 className="font-serif text-2xl text-white mb-8">Quick Links</h5>
+              <h5 className="font-serif text-2xl text-white mb-8">Links Rápidos</h5>
               <ul className="space-y-3 text-[15px]">
-                {["Home", "About", "Practice Areas", "Attorneys", "Blog"].map(link => (
-                  <li key={link}>
-                    <a href={`#${link.toLowerCase().split(" ")[0]}`} className="hover:text-gold hover:pl-2 transition-all">
-                      {link}
+                {[
+                  { name: "Início", link: "home" },
+                  { name: "Sobre Nós", link: "about" },
+                  { name: "Áreas de Atuação", link: "practice" },
+                  { name: "Atendimento", link: "contact" }
+                ].map(item => (
+                  <li key={item.name}>
+                    <a href={`#${item.link}`} className="hover:text-gold hover:pl-2 transition-all">
+                      {item.name}
                     </a>
                   </li>
                 ))}
@@ -478,14 +486,14 @@ export default function Home() {
             </div>
 
             <div>
-              <h5 className="font-serif text-2xl text-white mb-8">Subscribe</h5>
+              <h5 className="font-serif text-2xl text-white mb-8">Receba Novidades</h5>
               <p className="text-[15px] mb-6">
-                Stay in the know about our news. Sign up and be the first to be notified by email.
+                Fique por dentro das novidades jurídicas. Assine nossa newsletter para receber conteúdos exclusivos.
               </p>
               <div className="flex">
                 <input
                   type="email"
-                  placeholder="Email Address"
+                  placeholder="Seu E-mail"
                   className="bg-white/5 border border-white/10 border-r-0 px-4 py-3.5 w-full text-white text-sm focus:outline-none focus:border-gold"
                 />
                 <button className="bg-gold px-5 py-3.5 text-white hover:bg-[#b8903c] transition-colors">
@@ -498,8 +506,8 @@ export default function Home() {
           <div className="border-t border-white/10 py-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[15px]">
             <span>© 2026 Todos os Direitos Reservados | Pedro Paulo Advogados</span>
             <div className="flex gap-8">
-              <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-gold transition-colors">Terms of Use</a>
+              <a href="#" className="hover:text-gold transition-colors">Política de Privacidade</a>
+              <a href="#" className="hover:text-gold transition-colors">Termos de Uso</a>
             </div>
           </div>
         </div>
