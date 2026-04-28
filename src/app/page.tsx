@@ -286,23 +286,39 @@ export default function Home() {
       <section className="bg-off-white py-20">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-3 gap-12">
-            {[
-              { icon: Gavel, title: "Ética Jurídica" },
-              { icon: ShieldCheck, title: "Segurança & Sigilo" },
-              { icon: Trophy, title: "Excelência Comprovada" },
-            ].map((feature, i) => (
-              <Reveal delay={i * 100} key={feature.title}>
-                <div className="text-center group">
-                  <div className="w-20 h-20 mx-auto flex items-center justify-center border border-gold text-gold rounded-full mb-6 transition-all duration-300 group-hover:bg-gold group-hover:text-white">
-                    <feature.icon size={32} />
-                  </div>
-                  <h4 className="text-2xl font-serif font-medium mb-3">{feature.title}</h4>
-                  <p className="text-gray text-base leading-relaxed">
-                    Compromisso com a ética e resultados sólidos para nossos clientes em cada processo.
-                  </p>
+            <Reveal delay={0}>
+              <div className="text-center group">
+                <div className="w-20 h-20 mx-auto flex items-center justify-center border border-gold text-gold rounded-full mb-6 transition-all duration-300 group-hover:bg-gold group-hover:text-white">
+                  <Gavel size={32} />
                 </div>
-              </Reveal>
-            ))}
+                <h4 className="text-2xl font-serif font-medium mb-3">Ética Jurídica</h4>
+                <p className="text-gray text-base leading-relaxed">
+                  Compromisso com a ética e resultados sólidos para nossos clientes em cada processo.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={100}>
+              <div className="text-center group">
+                <div className="w-20 h-20 mx-auto flex items-center justify-center border border-gold text-gold rounded-full mb-6 transition-all duration-300 group-hover:bg-gold group-hover:text-white">
+                  <ShieldCheck size={32} />
+                </div>
+                <h4 className="text-2xl font-serif font-medium mb-3">Segurança & Sigilo</h4>
+                <p className="text-gray text-base leading-relaxed">
+                  Compromisso com a ética e resultados sólidos para nossos clientes em cada processo.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={200}>
+              <div className="text-center group">
+                <div className="w-20 h-20 mx-auto flex items-center justify-center border border-gold text-gold rounded-full mb-6 transition-all duration-300 group-hover:bg-gold group-hover:text-white">
+                  <Trophy size={32} />
+                </div>
+                <h4 className="text-2xl font-serif font-medium mb-3">Excelência Comprovada</h4>
+                <p className="text-gray text-base leading-relaxed">
+                  Compromisso com a ética e resultados sólidos para nossos clientes em cada processo.
+                </p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
