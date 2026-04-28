@@ -109,7 +109,7 @@ export default function Home() {
               <Scale size={20} className="text-white" />
             </div>
             <span className="font-serif text-3xl font-bold tracking-wide">
-              Law<span className="text-gold">dit</span>
+              Pedro Paulo<span className="text-gold"> Advogados</span>
             </span>
           </Link>
 
@@ -176,12 +176,12 @@ export default function Home() {
           <Reveal delay={0}>
             <div className="inline-flex items-center gap-2 bg-gold/15 border border-gold/40 text-gold px-4 py-1.5 text-sm tracking-widest uppercase mb-8">
               <span className="w-1.5 h-1.5 bg-gold rounded-full"></span>
-              Available Legal Solution
+              Escritório de Advocacia Full Service
             </div>
           </Reveal>
           <Reveal delay={150}>
             <h1 className="text-5xl md:text-7xl lg:text-[80px] font-serif font-semibold leading-[1.1] mb-8 max-w-4xl">
-              We are here for the <em className="text-gold italic">voice of justice</em>
+              Atendimento em <em className="text-gold italic">todo o Brasil</em>
             </h1>
           </Reveal>
           <Reveal delay={300}>
@@ -217,19 +217,19 @@ export default function Home() {
               <div className="lg:pl-8">
                 <span className="tag-label">About Our Firm</span>
                 <h2 className="text-4xl md:text-5xl lg:text-[54px] font-semibold leading-tight mb-6 text-dark">
-                  We are here to fight against <em className="text-gold italic">any violence</em>
+                  Presença <em className="text-gold italic">Física e Digital</em>
                 </h2>
                 <p className="text-gray text-[17px] leading-relaxed mb-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi.
+                  Atuamos com excelência jurídica em diversas áreas, unindo a tradição do atendimento presencial com a agilidade do mundo digital. Nossas unidades estão localizadas em pontos estratégicos do Rio de Janeiro.
                 </p>
                 <ul className="space-y-4 mb-10">
                   <li className="flex items-start gap-3 text-gray text-base">
                     <Check className="text-gold mt-1 flex-shrink-0" size={18} />
-                    Full service corporate &amp; business law firm
+                    Unidade Recreio dos Bandeirantes
                   </li>
                   <li className="flex items-start gap-3 text-gray text-base">
                     <Check className="text-gold mt-1 flex-shrink-0" size={18} />
-                    Reputable and innovative legal solutions
+                    Unidade Barra da Tijuca
                   </li>
                 </ul>
                 <a href="#contact" className="btn-primary">
@@ -417,11 +417,11 @@ export default function Home() {
                   <Scale size={20} className="text-white" />
                 </div>
                 <span className="font-serif text-2xl font-bold tracking-wide">
-                  Lawdit
+                  Pedro Paulo Advogados
                 </span>
               </div>
               <p className="text-[15px] leading-relaxed">
-                Full service corporate &amp; business law firm. Reputable and innovative legal solutions for all your needs.
+                Escritório de advocacia Full Service com atendimento em todo o Brasil. Soluções jurídicas inovadoras e personalizadas.
               </p>
             </div>
             
@@ -443,7 +443,7 @@ export default function Home() {
               <ul className="space-y-4 text-[15px]">
                 <li className="flex items-start gap-3">
                   <MapPin className="text-gold shrink-0 mt-1" size={18} />
-                  <span>6965 Paulding St. Victoria,<br/>Brooklyn NY 11209</span>
+                  <span>Rua Engenheiro Haroldo Cavalcante 360, sala 305,<br/>Recreio, Rio de Janeiro - RJ, 22795-240</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="text-gold shrink-0" size={18} />
@@ -475,7 +475,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-white/10 py-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[15px]">
-            <span>© 2026 All Rights Reserved By Lawdit</span>
+            <span>© 2026 Todos os Direitos Reservados | Pedro Paulo Advogados</span>
             <div className="flex gap-8">
               <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-gold transition-colors">Terms of Use</a>

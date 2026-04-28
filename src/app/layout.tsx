@@ -16,19 +16,19 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Lawdit – Escritório de Advocacia & Consultoria Jurídica",
-  description: "Lawdit – Escritório de advocacia especializado em consultoria jurídica, direito criminal, família, imóveis e lesões pessoais. Estamos aqui pela voz da justiça.",
-  keywords: "advogado, escritório de advocacia, consultoria jurídica, direito criminal, direito de família, direito imobiliário, lesões pessoais",
+  title: "Pedro Paulo Advogados – Escritório de Advocacia Full Service",
+  description: "Escritório de advocacia Full Service com atendimento em todo o Brasil. Unidades no Recreio dos Bandeirantes e Barra da Tijuca. Presença física e digital.",
+  keywords: "advogado, escritório de advocacia, Rio de Janeiro, Recreio dos Bandeirantes, Barra da Tijuca, atendimento digital, advogado rj",
   openGraph: {
-    title: "Lawdit – Estamos aqui pela voz da justiça",
-    description: "Escritório de advocacia com 20 anos de experiência. Consultoria jurídica confiável e soluções inovadoras.",
-    url: "https://lawdit.com/",
+    title: "Pedro Paulo Advogados – Atendimento em todo o Brasil",
+    description: "Escritório de advocacia Full Service com unidades no Rio de Janeiro. Soluções jurídicas inovadoras e personalizadas.",
+    url: "https://pedropauloadvogados.com.br/",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lawdit – Escritório de Advocacia",
-    description: "Estamos aqui pela voz da justiça. 20 anos de experiência jurídica.",
+    title: "Pedro Paulo Advogados",
+    description: "Escritório de advocacia Full Service com atendimento em todo o Brasil.",
   },
 };
 
