@@ -279,6 +279,13 @@ export default function Home() {
       <section className="bg-off-white py-20">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-3 gap-12">
+            {[
+              { icon: Gavel, title: "Ética Jurídica" },
+              { icon: ShieldCheck, title: "Segurança & Sigilo" },
+              { icon: Trophy, title: "Excelência Comprovada" },
+            ].map((feature, i) => (
+              <Reveal delay={i * 100} key={feature.title}>
+                <div className="text-center group">
                   <div className="w-20 h-20 mx-auto flex items-center justify-center border border-gold text-gold rounded-full mb-6 transition-all duration-300 group-hover:bg-gold group-hover:text-white">
                     <feature.icon size={32} />
                   </div>
