@@ -23,7 +23,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,6 +65,27 @@ const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
+  const [whatsappData, setWhatsappData] = useState({ name: "", service: "" });
+
+  const services = [
+    "Direito Civil",
+    "Direito de Família",
+    "Direito Criminal",
+    "Direito Imobiliário",
+    "Direito do Trabalho",
+    "Direito Empresarial",
+    "Outros"
+  ];
+
+  const handleWhatsAppSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const phoneNumber = "5521999999999"; // Substituir pelo número real
+    const message = `Olá, meu nome é ${whatsappData.name}. Gostaria de atendimento sobre: ${whatsappData.service}.`;
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+    setIsWhatsAppModalOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -483,6 +504,66 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* WHATSAPP BUTTON */}
+      <button
+        onClick={() => setIsWhatsAppModalOpen(true)}
+        className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform animate-pulse-whatsapp"
+        aria-label="Contato via WhatsApp"
+      >
+        <FaWhatsapp size={32} />
+      </button>
+
+      {/* WHATSAPP MODAL */}
+      {isWhatsAppModalOpen && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-6 bg-dark/60 backdrop-blur-sm">
+          <div className="bg-white w-full max-w-md rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
+            <div className="bg-gold p-6 text-white flex justify-between items-center">
+              <h3 className="font-serif text-2xl font-bold">Iniciar Atendimento</h3>
+              <button onClick={() => setIsWhatsAppModalOpen(false)} className="hover:rotate-90 transition-transform">
+                <X size={24} />
+              </button>
+            </div>
+            <form onSubmit={handleWhatsAppSubmit} className="p-8 space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray mb-2">Seu Nome</label>
+                <input
+                  required
+                  type="text"
+                  className="w-full border-b-2 border-off-white focus:border-gold py-2 outline-none transition-colors text-dark"
+                  placeholder="Como podemos te chamar?"
+                  value={whatsappData.name}
+                  onChange={(e) => setWhatsappData({ ...whatsappData, name: e.target.value })}
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray mb-2">Serviço de Interesse</label>
+                <select
+                  required
+                  className="w-full border-b-2 border-off-white focus:border-gold py-2 outline-none transition-colors text-dark bg-transparent"
+                  value={whatsappData.service}
+                  onChange={(e) => setWhatsappData({ ...whatsappData, service: e.target.value })}
+                >
+                  <option value="" disabled>Selecione uma área</option>
+                  {services.map(s => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-[#25D366] text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#1ebd5e] transition-colors shadow-lg"
+              >
+                <FaWhatsapp size={20} />
+                Falar com Advogado
+              </button>
+              <p className="text-[11px] text-gray-light text-center">
+                Seus dados serão utilizados apenas para este atendimento.
+              </p>
+            </form>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
