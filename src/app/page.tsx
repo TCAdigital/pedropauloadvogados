@@ -65,6 +65,7 @@ const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
   const [whatsappData, setWhatsappData] = useState({ name: "", service: "" });
 
@@ -89,6 +90,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
+      setScrollY(window.scrollY);
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
@@ -192,15 +194,20 @@ export default function Home() {
       </div>
 
       {/* HERO SECTION */}
-      <section id="home" className="relative min-h-[90vh] flex items-center pt-20 pb-32">
+      <section id="home" className="relative min-h-[90vh] flex items-center pt-20 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero.png"
-            alt="Hero background"
-            fill
-            className="object-cover"
-            priority
-          />
+          <div 
+            className="relative w-full h-full scale-110"
+            style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+          >
+            <Image
+              src="https://duruthemes.com/demo/html/lawdit/light/img/slider/3.jpg"
+              alt="Hero background"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
           <div className="absolute inset-0 bg-dark/75"></div>
         </div>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 w-full relative z-10 text-white">
