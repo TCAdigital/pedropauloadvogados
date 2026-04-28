@@ -7,10 +7,6 @@ import {
   Scale,
   Mail,
   Phone,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
   Check,
   Gavel,
   ShieldCheck,
@@ -27,6 +23,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -92,10 +89,10 @@ export default function Home() {
             </a>
           </div>
           <div className="flex gap-5 items-center">
-            <a href="#" className="hover:text-gold transition-colors"><Facebook size={14} /></a>
-            <a href="#" className="hover:text-gold transition-colors"><Twitter size={14} /></a>
-            <a href="#" className="hover:text-gold transition-colors"><Linkedin size={14} /></a>
-            <a href="#" className="hover:text-gold transition-colors"><Instagram size={14} /></a>
+            <a href="#" className="hover:text-gold transition-colors"><FaFacebookF size={14} /></a>
+            <a href="#" className="hover:text-gold transition-colors"><FaTwitter size={14} /></a>
+            <a href="#" className="hover:text-gold transition-colors"><FaLinkedinIn size={14} /></a>
+            <a href="#" className="hover:text-gold transition-colors"><FaInstagram size={14} /></a>
           </div>
         </div>
       </div>
