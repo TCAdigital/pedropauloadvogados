@@ -201,7 +201,7 @@ export default function Home() {
             style={{ transform: `translateY(${scrollY * 0.4}px)` }}
           >
             <Image
-              src="https://duruthemes.com/demo/html/lawdit/light/img/slider/3.jpg"
+              src="/images/hero_premium.jpg"
               alt="Hero background"
               fill
               className="object-cover"
