@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #c9a84c;
+  --color-gold-light: #e2c27d;
+  --color-dark: #1a1a1a;
+  --color-dark2: #111111;
+  --color-dark3: #222222;
+  --color-charcoal: #2d2d2d;
+  --color-gray: #666666;
+  --color-gray-light: #999999;
+  --color-off-white: #f7f5f0;
+  
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-jost);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: theme('color.white');
+  color: theme('color.dark');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Base utility classes from old design */
+.hover-gold-text {
+  @apply transition-colors duration-300 hover:text-gold;
+}
+
+.btn-primary {
+  @apply inline-block bg-gold text-white px-8 py-3.5 font-sans text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-[#b8903c] hover:-translate-y-[1px];
+}
+
+.btn-outline {
+  @apply inline-block border border-gold text-gold px-7 py-3 font-sans text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-white;
+}
+
+.tag-label {
+  @apply inline-flex items-center gap-2 text-sm text-gold font-medium tracking-wide mb-4;
+}
+
+.tag-label::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background-color: theme('color.gold');
+}
