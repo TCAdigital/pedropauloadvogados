@@ -310,8 +310,8 @@ export default function Home() {
                       className="rounded-full border-2 border-gold object-cover"
                     />
                     <div>
-                      <div className="font-serif text-[19px] font-semibold">Emily D. Michael</div>
-                      <div className="text-gold text-xs uppercase tracking-widest">President & Co-Founder</div>
+                      <div className="font-serif text-[19px] font-semibold">Pedro Paulo Lucas da Silva</div>
+                      <div className="text-gold text-xs uppercase tracking-widest">Sócio-Fundador</div>
                     </div>
                   </div>
                 </div>
