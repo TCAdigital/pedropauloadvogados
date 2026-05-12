@@ -154,10 +154,10 @@ export default function Home() {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-8">
             {[
-              { name: "Início", link: "home" },
-              { name: "Sobre Nós", link: "about" },
-              { name: "Áreas de Atuação", link: "practice" },
-              { name: "Atendimento", link: "contact" }
+              { name: "Início", link: "inicio" },
+              { name: "Sobre Nós", link: "sobre" },
+              { name: "Áreas de Atuação", link: "atuacao" },
+              { name: "Atendimento", link: "contato" }
             ].map((item) => (
               <a
                 key={item.name}
@@ -194,10 +194,10 @@ export default function Home() {
       >
         <div className="flex flex-col p-6 gap-6">
           {[
-            { name: "Início", link: "home" },
-            { name: "Sobre Nós", link: "about" },
-            { name: "Áreas de Atuação", link: "practice" },
-            { name: "Atendimento", link: "contact" }
+            { name: "Início", link: "inicio" },
+            { name: "Sobre Nós", link: "sobre" },
+            { name: "Áreas de Atuação", link: "atuacao" },
+            { name: "Atendimento", link: "contato" }
           ].map((item) => (
             <a
               key={item.name}
@@ -212,7 +212,7 @@ export default function Home() {
       </div>
 
       {/* HERO SECTION */}
-      <section id="home" className="relative min-h-[90vh] flex items-center pt-20 pb-32 overflow-hidden">
+      <section id="inicio" className="relative min-h-[90vh] flex items-center pt-20 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div 
             className="relative w-full h-full scale-110"
@@ -245,7 +245,7 @@ export default function Home() {
               Pedro Paulo Advogados: Atendimento full service em todo o Brasil, unindo tradição e inovação para proteger o que é seu.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#about" className="btn-primary">
+              <a href="#sobre" className="btn-primary">
                 Conheça o Escritório
               </a>
               <button onClick={() => setIsWhatsAppModalOpen(true)} className="btn-outline border-white text-white hover:bg-white hover:text-dark">
@@ -257,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="py-24 lg:py-32">
+      <section id="sobre" className="py-24 lg:py-32">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <Reveal>
@@ -437,7 +437,7 @@ export default function Home() {
       </section>
 
       {/* PRACTICE AREAS (Replacing old case studies layout with the modern grid) */}
-      <section id="practice" className="py-24 lg:py-32 bg-off-white">
+      <section id="atuacao" className="py-24 lg:py-32 bg-off-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid xl:grid-cols-[350px_1fr] gap-16 items-start">
             <Reveal>
@@ -520,7 +520,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer id="contact" className="bg-dark2 text-white/65 pt-24 border-t border-white/5">
+      <footer id="contato" className="bg-dark2 text-white/65 pt-24 border-t border-white/5">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
             <div>
@@ -541,10 +541,10 @@ export default function Home() {
               <h5 className="font-serif text-2xl text-white mb-8">Links Rápidos</h5>
               <ul className="space-y-3 text-[15px]">
                 {[
-                  { name: "Início", link: "home" },
-                  { name: "Sobre Nós", link: "about" },
-                  { name: "Áreas de Atuação", link: "practice" },
-                  { name: "Atendimento", link: "contact" }
+                  { name: "Início", link: "inicio" },
+                  { name: "Sobre Nós", link: "sobre" },
+                  { name: "Áreas de Atuação", link: "atuacao" },
+                  { name: "Atendimento", link: "contato" }
                 ].map(item => (
                   <li key={item.name}>
                     <a href={`#${item.link}`} className="hover:text-gold hover:pl-2 transition-all">
