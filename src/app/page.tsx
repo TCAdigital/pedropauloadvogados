@@ -592,7 +592,12 @@ export default function Home() {
           </div>
 
           <div className="border-t border-white/10 py-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[15px]">
-            <span>© 2026 Todos os Direitos Reservados | Pedro Paulo Advogados</span>
+            <div className="flex flex-col items-center md:items-start gap-1">
+              <span>© 2026 Todos os Direitos Reservados | Pedro Paulo Advogados</span>
+              <span className="text-sm opacity-80">
+                Desenvolvido com amor ❤️ pela <a href="https://www.tcadigital.com.br/express" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">TCA Digital Ai-Driven</a>
+              </span>
+            </div>
             <div className="flex gap-8">
               <a href="#" className="hover:text-gold transition-colors">Política de Privacidade</a>
               <a href="#" className="hover:text-gold transition-colors">Termos de Uso</a>
