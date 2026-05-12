@@ -453,12 +453,12 @@ export default function Home() {
             </Reveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: Building2, title: "Real Estate Law" },
-                { icon: ShieldCheck, title: "Personal Law" },
-                { icon: HeartPulse, title: "Personal Injury" },
-                { icon: Briefcase, title: "Business Law" },
-                { icon: GraduationCap, title: "Education Law" },
-                { icon: Scale, title: "Criminal Law" },
+                { icon: Building2, title: "Direito Imobiliário" },
+                { icon: ShieldCheck, title: "Direito Civil" },
+                { icon: HeartPulse, title: "Danos Pessoais" },
+                { icon: Briefcase, title: "Direito Empresarial" },
+                { icon: GraduationCap, title: "Direito Educacional" },
+                { icon: Scale, title: "Direito Criminal" },
               ].map((pa, i) => (
                 <Reveal delay={i * 100} key={pa.title}>
                   <div className="bg-white p-10 border border-[#e8e4db] text-center hover:border-gold hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer group">
@@ -485,9 +485,9 @@ export default function Home() {
           </Reveal>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Jodi Martha", role: "Client", img: "/images/client1.png" },
-              { name: "James Martha", role: "Client", img: "/images/client2.png" },
-              { name: "Olivia Brown", role: "Client", img: "/images/client3.png" },
+              { name: "Jodi Martha", role: "Cliente", img: "/images/client1.png" },
+              { name: "James Martha", role: "Cliente", img: "/images/client2.png" },
+              { name: "Olivia Brown", role: "Cliente", img: "/images/client3.png" },
             ].map((testi, i) => (
               <Reveal delay={i * 100} key={testi.name}>
                 <div className="bg-off-white p-10 border-t-4 border-transparent hover:border-gold transition-colors duration-300">
@@ -497,7 +497,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray text-[17px] leading-relaxed mb-8 italic">
-                    "Best lawyers in the law. I felt an unbelievably difficult company to deal with. I really trusted Lawdit law firm."
+                    "Excelente atendimento. Profissionais altamente qualificados que passam muita segurança em cada etapa do processo. Recomendo fortemente o escritório Pedro Paulo Advogados."
                   </p>
                   <div className="flex items-center gap-4">
                     <Image
@@ -556,7 +556,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h5 className="font-serif text-2xl text-white mb-8">Contact</h5>
+              <h5 className="font-serif text-2xl text-white mb-8">Contato</h5>
               <ul className="space-y-4 text-[15px]">
                 <li className="flex items-start gap-3">
                   <MapPin className="text-gold shrink-0 mt-1" size={18} />
