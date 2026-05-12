@@ -68,6 +68,7 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
   const [whatsappData, setWhatsappData] = useState({ name: "", service: "" });
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const services = [
     "Direito Civil",
@@ -77,6 +78,20 @@ export default function Home() {
     "Direito do Trabalho",
     "Direito Empresarial",
     "Outros"
+  ];
+
+  const galleryImages = [
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.12.48.jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.12.49 (1).jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.12.49 (2).jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.12.49.jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.12.50 (1).jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.12.50 (2).jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.12.50.jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.12.51.jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.17.00.jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.17.01 (1).jpeg",
+    "/images/galeria/WhatsApp Image 2026-05-08 at 12.17.01.jpeg",
   ];
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
@@ -278,6 +293,46 @@ export default function Home() {
                 </ul>
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY SECTION */}
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+          <Reveal>
+            <div className="text-center mb-16">
+              <span className="tag-label justify-center">Nossa Infraestrutura</span>
+              <h2 className="text-4xl md:text-5xl lg:text-[54px] font-semibold text-dark">
+                Conheça o <em className="text-gold italic">Nosso Escritório</em>
+              </h2>
+              <p className="text-gray mt-4 max-w-2xl mx-auto text-[17px]">
+                Ambientes modernos e preparados para oferecer o melhor atendimento jurídico aos nossos clientes.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {galleryImages.map((img, index) => (
+              <Reveal delay={index * 50} key={index}>
+                <div 
+                  className="relative aspect-square overflow-hidden cursor-pointer group rounded-sm shadow-sm"
+                  onClick={() => setSelectedImage(img)}
+                >
+                  <Image
+                    src={img}
+                    alt={`Galeria ${index + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white border border-white/30 px-4 py-2 text-sm uppercase tracking-widest backdrop-blur-sm">
+                      Ver Foto
+                    </span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -599,6 +654,30 @@ export default function Home() {
                 Seus dados serão utilizados apenas para este atendimento.
               </p>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* LIGHTBOX */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-dark/95 backdrop-blur-md p-4 animate-in fade-in duration-300"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button 
+            className="absolute top-8 right-8 text-white hover:text-gold transition-colors z-[110]"
+            onClick={() => setSelectedImage(null)}
+          >
+            <X size={40} />
+          </button>
+          <div className="relative w-full h-full max-w-6xl max-h-[85vh] flex items-center justify-center">
+            <Image
+              src={selectedImage}
+              alt="Full size view"
+              width={1600}
+              height={1200}
+              className="object-contain w-full h-full"
+            />
           </div>
         </div>
       )}
