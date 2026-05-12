@@ -168,9 +168,12 @@ export default function Home() {
                 <span className="absolute -bottom-1.5 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            <a href="#contact" className="btn-primary ml-2 py-2.5 px-6">
+            <button
+              onClick={() => setIsWhatsAppModalOpen(true)}
+              className="btn-primary ml-2 py-2.5 px-6"
+            >
               Consulta Gratuita
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -393,11 +396,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <Reveal>
               <Image
-                src="/images/founder.png"
-                alt="Lawyer"
+                src="/images/adv-pedro-paulo.png"
+                alt="Pedro Paulo Lucas da Silva"
                 width={800}
                 height={500}
-                className="w-full h-[400px] object-cover opacity-90 grayscale-[20%]"
+                className="w-full h-[400px] object-cover opacity-90"
               />
             </Reveal>
             <Reveal delay={150}>
@@ -415,11 +418,11 @@ export default function Home() {
                   </button>
                   <div className="flex items-center gap-4">
                     <Image
-                      src="/images/founder.png"
-                      alt="Founder"
+                      src="/images/adv-pedro-paulo.png"
+                      alt="Pedro Paulo"
                       width={56}
                       height={56}
-                      className="rounded-full border-2 border-gold object-cover"
+                      className="rounded-full border-2 border-gold object-cover w-14 h-14"
                     />
                     <div>
                       <div className="font-serif text-[19px] font-semibold">Pedro Paulo Lucas da Silva</div>
